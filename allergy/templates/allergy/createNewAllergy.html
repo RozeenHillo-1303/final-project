@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Add Allergy</title>
+</head>
+<body>
+    <div class="card">
+<h1>Add Allergy</h1>
+    <h3>{{errMsg}}</h3>
+<form action="#" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">SAVE Allergy</button>
+    <span>📋</span><a href="/profile">Back to My Profile</a>
+</form>
+</div>
+</body>
+</html>

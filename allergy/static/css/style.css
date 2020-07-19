@@ -1,0 +1,757 @@
+/************************ALL********************/
+body {
+    font-family: sans-serif;
+    background: #1d518db7;
+}  
+  
+   
+#logo {
+    background-image: url(../../static/allergy/images/logo.png);
+    background-repeat: no-repeat;
+    position: relative;
+    height: 150px;
+    display: block;
+    left: 358px;
+   bottom: 100px;
+}
+  
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(240, 186, 186, 0);
+    box-sizing: border-box;
+    box-shadow: 0 30px 30px rgb(20, 190, 233);
+    border-radius: 10px;
+}
+  
+a{
+    text-decoration: none;
+}
+
+
+/********************(Index)************************/
+
+.card .track{
+  margin-left: 60px;
+  margin-top: -100px;
+ 
+}
+
+.parallax{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(240, 186, 186, 0);
+    box-sizing: border-box;
+    box-shadow: 0 30px 30px rgb(20, 190, 233);
+    border-radius: 10px;
+}
+
+
+.login-button{
+    position: fixed;
+    top: 15em;
+    left: 14em;
+    z-index: 99999;
+    text-decoration: none;
+    color: #FFF;
+    padding: 15px;
+    margin-left: 10px;
+    font-family: arial;
+    border: 2px solid #FFF;
+    width: 60px;
+    text-align: center;
+}
+.login-button:hover{
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+    
+}
+.register-button:hover{
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.register-button{
+    position: fixed;
+    top: 15em;
+    left: 41em;
+    z-index: 99999;
+    text-decoration: none;
+    color: #FFF;
+    padding: 15px;
+    font-family: arial;
+    border: 2px solid #FFF;
+    width: 60px;
+    text-align: center;
+    
+} 
+  
+
+
+/********************Login****************/
+.login-box #logo{
+  margin: 0 auto;
+  left:60px;
+  top:-10px;
+  height:145px;
+}
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(240, 186, 186, 0);
+    box-sizing: border-box;
+    box-shadow: 0 30px 30px rgb(20, 190, 233);
+    border-radius: 10px;
+}
+         
+.login-box h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+    
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.login-box .alogin:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+button{     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;       
+}
+
+h1{
+    color: #fff;
+}
+
+/********************(register)*****************/
+.card button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color:white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: 1px solid #03e9f4;
+    border-radius: 5px;
+}
+.card button:hover{
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.card h1{
+    text-align: center;
+}
+
+
+
+/*-----------------(profile)-----------------*/
+.menu-wrap,.mean-hos
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+
+.menu-wrap .toggler
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 2;
+ cursor: pointer;
+ width: 50px;
+ height: 50px;
+ opacity: 0;
+}
+
+.menu-wrap .hamburger,.menu-hos .hospital
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+ width: 60px;
+ height: 60px;
+ padding: 1rem;
+ background: var(--primary-color);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div
+{
+ position: relative;
+ flex: none;
+ width: 100%;
+ height: 2px;
+ background: black;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after,
+.menu-hos .hospital > div::before,
+.menu-hos .hospital > div::after
+{
+ content: '';
+ position: absolute;
+ z-index: 1;
+ top: -10px;
+ width: 100%;
+ height: 2px;
+ background: inherit;
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after,.menu-hos .hospital > div::after
+{
+ top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div
+{
+ transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+ top: 0;
+ transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+ transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu{
+   visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+ transform: scale(1);
+ transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+ opacity: 1;
+ transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu, .menu-hos .menuh {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ visibility: hidden;
+ overflow: hidden;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.menu-wrap .menu > div,
+.menu-hos .menuh > div {
+ background: var(--overlay-color);
+ border-radius: 50%;
+ width: 200vw;
+ height: 200vw;
+ display: flex;
+ flex: none;
+ align-items: center;
+ justify-content: center;
+ transform: scale(0);
+ transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div,
+.menu-hos .menuh > div > div {
+ text-align: center;
+ max-width: 90vw;
+ max-height: 100vh;
+ opacity: 0;
+ transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li,
+.menu-hos .menuh > div > div > ul > li {
+ list-style: none;
+ color:black;
+ font-size: 1.5rem;
+ padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+ color: inherit;
+ text-decoration: none;
+ transition: color 0.4s ease;
+}
+:root {
+     
+    --overlay-color: rgba(144, 211, 238, 0.85);
+    --menu-speed: 0.75s;
+  }
+  
+.emergency_btn{
+    position: fixed;
+    top: 30em;
+    left: 62em;
+    z-index: 99999;
+    text-decoration: none;
+    background: #e61919;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: arial;
+    border: 2px solid rgb(245, 6, 6);
+    box-shadow: 0 0 5px #ee3232,
+                0 0 25px #ee3232,
+                0 0 50px #ee3232,
+                0 0 100px #ee3232;
+}
+
+.emergency_btn:hover{
+    
+   padding:13px ;
+} 
+
+#hospitalNumber{
+  position: fixed;
+    top: 25em;
+    left: 61em;
+    z-index: 99999;
+    text-decoration: none;
+    background: #e61919;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: arial;
+    border: 2px solid rgb(245, 6, 6);
+    box-shadow: 0 0 5px #ee3232,
+                0 0 25px #ee3232,
+                0 0 50px #ee3232,
+                0 0 100px #ee3232;
+}
+
+  
+  
+  
+#profile #profile_slider 
+{
+width: 325px;
+height: 410px;
+background:rgb(172, 218, 236);
+color:black;
+font-size: 14px;
+position: absolute;
+visibility: hidden;
+margin-left: 655px;
+z-index: 1;
+margin-top: -570px;
+padding: 10px;
+opacity: 0.7;
+border-radius: 10px;
+right: 90px;
+}
+   
+  
+#profile #profile_slider li
+{
+height: 80px;
+border-bottom: 1px solid #eceff4;
+padding: 15px;
+}
+
+#profile #profile_slider li:last-child
+{
+    border-bottom: 0;
+}
+
+#profile #profile_slider li .slider_item,
+.profile_slider li
+{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+   
+
+/*****************(Epipen)***********************/
+
+
+#Epipen h2{
+    margin-top: 55px;
+    margin-left: 120px;
+}
+
+.slidershow
+{
+  width: 700px;
+  height: 250px;
+  overflow: hidden;
+}
+.middle
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.navigation
+{
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar
+{
+  width: 50px;
+  height: 10px;
+  border: 2px solid red;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover
+{
+  background: rgb(58, 56, 56);
+}
+
+input[name="r"]
+{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides
+{
+
+  width: 500%;
+  height: 100%;   
+  display: flex;
+  margin: 0px 138px;
+}
+
+.slide
+{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide .images
+{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1
+{
+  margin-left: 0;
+}
+#r2:checked ~ .s1
+{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1
+{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1
+{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1
+{
+  margin-left: -80%;
+  
+}
+
+
+
+/********************(updateallerge)****************/
+
+.card .buttons{
+  position: absolute;
+    right:  100px;
+    bottom: 50px; 
+    margin: 20px;
+    }
+
+/********************(json)**************/    
+
+div .name{
+  margin: 5px;
+  color:#03e9f4;
+}
+div .number{
+  color: #03e9f4;
+}
+    /****************(media)***********/
+
+
+@media only screen and (min-width:418px)and (max-width:768px){
+  /****profile+update+creat**/
+  .card{
+    width: 500px;
+    height: 500px;
+  }
+  .card h1{
+    font-size: 20px;
+  }
+  .card span{
+    display: block;
+  }
+  .card #hospitalNumber{
+    visibility: hidden;
+  }
+  .card .emergency_btn{
+    visibility: hidden;
+  }
+  .card a{
+    display: block;
+  }
+.card ul{
+  margin: 0 auto;
+  }
+.card button{
+  padding: 5px;
+  bottom: 90px;
+  left: 300px;
+  }
+.card h2{
+  visibility: hidden;
+  }
+.card .manual{
+  
+  margin-left: 100px;
+  
+  }
+.card .navigation{
+  bottom: 10px;
+  margin-left: 10px;
+  }
+.card .buttons{
+  
+position: relative;
+float: left;
+margin: 0px;
+  }
+
+.buttons button{
+  margin: 2px;
+  top: 30px;
+  }
+
+/*index*/
+.card svg{
+  visibility: hidden;
+}
+.card .register-button{
+  left: 100px;
+}
+.card .login-button{
+  left: 300px;
+}
+.card #logo{
+  left: 100px;
+}
+/****register****/
+.card .register{
+  top: 30px;
+}
+}
+
+
+    

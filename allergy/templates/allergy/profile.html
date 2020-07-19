@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>profile</title>
+</head>
+<body>
+    <div class="card">
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li><a href="/profile">Profile</a></li>
+                            <li><a href="/Emergency">Emergency</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+        {% if user.is_authenticated %}
+        <h1>Hello {{user.username}}</h1>
+        <br><br>
+        <section>My Allergies:</section>
+        <ul>
+            <ol>
+                {% for t in allallergies %}
+                    <li>
+                        <a>
+                            {{t.dateCreated}} 
+                            {% if t.Life_threatening %} <b> {% endif %}
+                            {{t.New_Allergy}}
+                            {% if t.Life_threatening %} </b> {% endif %}
+                        </a>
+                        <a href="/allergy/{{ t.id }}">Update</a> 
+                    </li>
+                {% endfor %}
+            </ol>
+        </ul>
+        
+            <span>➕</span> <a href="/createNewAllergy">Add Allergy</a>|
+            <span>➕</span> <a href="/createNewHospitalization">Add Hospitalization</a>
+            <br><br>
+            <form action="{% url 'logoutuser' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">logout</button>
+            </form>
+
+        {% else %}
+            <a href="#">login</a>
+            <a href="register">register</a>
+        {% endif %}
+    </div>
+    <a id="hospitalNumber" href="/json">hospitalNumber</a>
+    
+    <a class="emergency_btn" href="/Emergency">Emergency</a>
+    <script src="../../static/js/main.js"></script>
+    
+</body>
+    </html>
+    

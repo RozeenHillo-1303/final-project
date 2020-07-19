@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update My Hospitalization</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <h1>Update Hospitalization {{ hospitalization.Name_of_hospital }}</h1>
+        <br><br>
+        <h3>{{errMsg}}</h3>
+
+
+    <form action="{% url 'deletehospitalization' hospitalization.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Delete Hospitalization</button>
+    </form>
+
+    <form action="{% url 'logoutuser' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+    </form>
+{% else %}
+    <a href="#">login</a>
+    <a href="register">register</a>
+{% endif %}
+
+</body>
+</html>

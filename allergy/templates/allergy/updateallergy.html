@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Update My Allergy</title>
+</head>
+<body>
+    <div class="card">
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/Emergency">Emergency</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    {% if user.is_authenticated %}
+        <h1>Update Allergy {{ allergy.New_Allergy }}</h1>
+        <br><br>
+        <h3>{{errMsg}}</h3>
+
+        
+        <form action="#" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+         <div class="buttons">   
+            <button type='submit'>UPDATE Allergy</button>
+     </form>
+
+   
+
+    <form action="{% url 'deleteallergy' allergy.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Delete Allergy</button>
+    </form>
+
+    <form action="{% url 'logoutuser' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+    </form>
+  
+</div>
+{% else %}
+    <a href="#">login</a>
+    <a href="register">register</a>
+{% endif %}
+</div>
+</body>
+</html>

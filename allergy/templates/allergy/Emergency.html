@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  </head>
+  <body id="Epipen">
+      <div class="card">
+          <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+              <div class="hamburger"><div></div></div>
+              <div class="menu">
+                <div>
+                  <div>
+                    <ul>
+                      <li><a href="/profile">Profile</a></li>
+                      <li><a href="/Emergency">Emergency</a></li>
+                    </ul>
+                  </div>
+                </div>
+             </div>
+          </div>
+          <div class="topnav">                            
+          </div>
+          <div class="manual">                        
+            <div class="slidershow middle">
+              <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <input type="radio" name="r" id="r5">
+                  <div class="slide s1">
+                    <img src="../../static/allergy/images/4.1.jpeg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="../../static/allergy/images/4.2.jpeg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="../../static/allergy/images/4.3.jpeg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="../../static/allergy/images/4.4.jpeg" alt="">
+                  </div>
+                  <div class="slide">
+                    <img src="../../static/allergy/images/4.5.jpeg" alt="">
+                  </div>
+                  </div>
+                  <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                  </div>    
+      </div>
+      <h2>Here are 5 simple steps how to correctly use an EpiPen.</h2><br>
+  </body>
+</html>

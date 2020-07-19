@@ -1,0 +1,36 @@
+{
+    "0": {
+        "Name": "Affola hospital",
+        "Number": "03-6765456"
+        },
+    
+
+    "1": {
+        "Name": "Haifa District",
+        "Number": "04-6239990"
+    },
+    "2":{
+        "Name":"Hadera hospital",
+        "Number": "04-65098456"
+        },
+
+    "3":{    
+        "Name":"Ramat Gan hospital",
+        "number": "04-6235456"
+    },
+
+    "4":{    
+        "Name":"Jerusalem District",
+        "number": "04-6235456"
+    },
+
+    "5":{    
+        "Name":"Tiberias hospital",
+        "number": "04-6235456"
+    },
+
+    "6":{    
+        "Name":"Jaffa hospital",
+        "number": "04-6235456"
+    }
+}
